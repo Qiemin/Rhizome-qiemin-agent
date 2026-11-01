@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rhizome-qiemin-agent"
+version = "0.1.0"
+description = "基于自写agent脚手架开发的办公型agent"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1,<2",
+    "langchain-core>=1.7,<2",
+    "langchain-openai>=1.7,<2",
+    "httpx[socks]>=0.28,<1",
+    "langgraph>=1.2,<2",
+    "psycopg[binary]>=3.3,<4",
+    "fastapi",
+    "uvicorn",
+    "pywin32==312; sys_platform == 'win32'",
+]
+
+[project.scripts]
+agent = "agent.api.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

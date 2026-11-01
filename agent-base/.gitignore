@@ -1,0 +1,28 @@
+# Python 虚拟环境和缓存
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 本机配置与密钥
+.env
+
+# 本地数据库与运行数据
+data/
+logs/
+
+# 测试生成文件
+.pytest_cache/
+.coverage
+
+# Local configuration and storage
+.env.*
+!.env.example
+.tmp/
+*.db
+*.sqlite
+*.sqlite3
+
+# Application workspace and generated source archives
+workspace/
+releases/
