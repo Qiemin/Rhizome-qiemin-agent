@@ -24,5 +24,4 @@ logs/
 *.sqlite3
 
 # Application workspace and generated source archives
-workspace/
 releases/
